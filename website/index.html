@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Arthur Diniz — DevOps · SRE · Platform Engineering</title>
+  <meta name="description"
+    content="Portfólio de Arthur Diniz Souza Silva: automação, observabilidade e engenharia de plataformas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <script>
+    (function () {
+      var t; try {t = localStorage.getItem('theme')} catch (e) { }
+      if (!t) {t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'}
+      document.documentElement.setAttribute('data-theme', t)
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="#topo" aria-label="Arthur Diniz — início"><i aria-hidden="true"></i>A.DINIZ</a>
+      <nav id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#trajetoria">Trajetória</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="tools">
+        <button class="ib" id="theme" type="button" aria-label="Alternar tema claro e escuro">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+          </svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4 7 7 0 0 0 20 14.5z" />
+          </svg></button>
+        <button class="ib mb" id="menu" type="button" aria-label="Abrir menu" aria-expanded="false"
+          aria-controls="nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 8h16M4 16h16" />
+          </svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap" id="topo">
+      <div class="hero">
+        <svg class="hbg" viewBox="0 0 1160 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path class="wire" pathLength="100" d="M1160 90H980V160H820V230" style="animation-delay:.3s" />
+          <path class="trace" pathLength="100" d="M1160 90H980V160H820V230" style="animation-delay:3s" />
+          <path class="wire" pathLength="100" d="M0 60H140V140H300" style="animation-delay:.6s" />
+          <path class="trace" pathLength="100" d="M0 60H140V140H300" style="animation-delay:4.2s" />
+        </svg>
+        <div>
+          <span class="chipt">DevOps · SRE · Platform Engineering</span>
+          <h1>Arthur<br>Diniz</h1>
+          <p class="lead"><b>Analista de software</b> em transição para engenharia de plataformas. Construo automação,
+            telemetria e infraestrutura com foco em confiabilidade.</p>
+          <div class="cta"><a class="btn p" href="#projetos">Ver projetos →</a><a class="btn"
+              href="#contato">Contato</a><button class="btn" type="button" data-cv>Currículo (PDF) ↓</button></div>
+          <div class="tags"><span>Observável</span><i>✦</i><span>Reproduzível</span><i>✦</i><span>Confiável</span></div>
+          <p class="mono" style="margin-top:1rem"><i class="rec"></i>Sete Lagoas · MG · UTC−3</p>
+        </div>
+        <figure class="fig tex"
+          aria-label="Mapa de sistemas com três pontos: pipeline de entrega, fronteira entre desenvolvimento e produção, e laboratório">
+          <svg viewBox="0 0 400 440" aria-hidden="true">
+            <defs>
+              <pattern id="h" width="8" height="5" patternUnits="userSpaceOnUse">
+                <path d="M0 .5H8" stroke="var(--ink)" stroke-width="1" />
+              </pattern>
+            </defs>
+            <path d="M-10 20L190 220Q200 232 210 220L410 20V70L228 252Q200 280 172 252L-10 70Z" fill="url(#h)"
+              opacity=".7" />
+            <path class="th" d="M-10 20L190 220Q200 232 210 220L410 20" />
+            <path class="th" d="M-10 70L172 252Q200 280 228 252L410 70" />
+            <path class="dt" d="M-10 -20L200 190L410 -20" />
+            <path class="th" d="M-10 320q15-10 30 0t30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0" />
+            <path class="dt" d="M-10 372Q200 340 410 372" />
+            <rect x="140" y="388" width="120" height="40" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.4" />
+            <path class="wire" pathLength="100" d="M200 181V262H310V307M310 333V408H213" />
+            <path class="trace" pathLength="100" d="M200 181V262H310V307M310 333V408H213" />
+            <g class="mk">
+              <circle cx="200" cy="168" r="13" /><text x="200" y="172">1</text>
+              <circle cx="310" cy="320" r="13" /><text x="310" y="324">2</text>
+              <circle cx="200" cy="408" r="13" /><text x="200" y="412">3</text>
+            </g>
+          </svg>
+          <ol class="leg">
+            <li><b>[01]</b>
+              <div><strong>Pipeline de entrega</strong><span>commit → build → deploy → observe, com feedback
+                  fechado.</span></div>
+            </li>
+            <li><b>[02]</b>
+              <div><strong>Fronteira dev / prod</strong><span>Automação reprodutível entre ambientes.</span></div>
+            </li>
+            <li><b>[03]</b>
+              <div><strong>Laboratório</strong><span>Projetos pessoais e estudo contínuo.</span></div>
+            </li>
+          </ol>
+          <figcaption class="cap mono"><span>Fig. 01 — Mapa de sistemas</span><span>Rev. A</span></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="mq" aria-hidden="true">
+      <div class="mq-t">
+        <div class="mq-h"><span>Automação</span><i>✦</i><span
+            class="o">Observabilidade</span><i>✦</i><span>Confiabilidade</span><i>✦</i><span
+            class="o">Plataforma</span><i>✦</i></div>
+        <div class="mq-h"><span>Automação</span><i>✦</i><span
+            class="o">Observabilidade</span><i>✦</i><span>Confiabilidade</span><i>✦</i><span
+            class="o">Plataforma</span><i>✦</i></div>
+      </div>
+    </div>
+    <section id="sobre">
+      <div class="wrap">
+        <div class="sh rv">
+          <h2>Sobre</h2>
+          <p>Sistemas confiáveis não são acaso. São decisões pequenas, repetidas com disciplina.</p>
+        </div>
+        <div class="about rv">
+          <figure class="fig col"
+            aria-label="Elevação frontal de uma coluna dórica, usada como modelo de plataforma em quatro camadas">
+            <svg viewBox="0 0 300 440" aria-hidden="true">
+              <defs>
+                <pattern id="hh" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                  <path d="M0 0V6" stroke="var(--ink)" stroke-width="1" />
+                </pattern>
+              </defs>
+              <path class="cx" d="M150 6V420" />
+              <g data-p="A">
+                <path class="th" d="M42 18h216v12H42zM50 30h200v26H50zM50 56h200v30H50z" />
+                <path class="ln"
+                  d="M63 58h14v26H63zM68 58v26M72 58v26M103 58h14v26h-14zM108 58v26M112 58v26M143 58h14v26h-14zM148 58v26M152 58v26M183 58h14v26h-14zM188 58v26M192 58v26M223 58h14v26h-14zM228 58v26M232 58v26" />
+              </g>
+              <g data-p="B">
+                <path class="th" d="M62 86h176v10H62zM66 96h168Q226 112 204 118H96Q74 112 66 96z" />
+              </g>
+              <g data-p="C">
+                <path d="M180 118L200 118Q208 240 212 360L187 360Q186 240 180 118Z" fill="url(#hh)" opacity=".55" />
+                <path class="th" d="M100 118Q92 240 88 360M200 118Q208 240 212 360" />
+                <path class="ln"
+                  d="M120 118Q114 240 113 360M140 118Q138 240 138 360M160 118Q162 240 162 360M180 118Q186 240 187 360" />
+              </g>
+              <g data-p="D">
+                <path class="th" d="M70 360h160v12H70zM52 372h196v12H52zM34 384h232v12H34zM10 396H290" />
+                <rect x="10" y="396" width="280" height="12" fill="url(#hh)" opacity=".4" />
+              </g>
+              <path class="dm" d="M262 18H290M262 86H290M262 118H290M262 360H290M262 396H290M284 18V396" />
+              <g fill="var(--ink)">
+                <rect x="281.5" y="15.5" width="5" height="5" />
+                <rect x="281.5" y="83.5" width="5" height="5" />
+                <rect x="281.5" y="115.5" width="5" height="5" />
+                <rect x="281.5" y="357.5" width="5" height="5" />
+                <rect x="281.5" y="393.5" width="5" height="5" />
+              </g>
+              <path class="dm" d="M28 52H42M28 102H62M28 240H93M28 378H52" />
+              <g class="mk">
+                <circle cx="18" cy="52" r="10" /><text x="18" y="56">A</text>
+                <circle cx="18" cy="102" r="10" /><text x="18" y="106">B</text>
+                <circle cx="18" cy="240" r="10" /><text x="18" y="244">C</text>
+                <circle cx="18" cy="378" r="10" /><text x="18" y="382">D</text>
+              </g>
+              <text class="t" x="10" y="430">ELEVAÇÃO FRONTAL</text>
+            </svg>
+            <ol class="leg">
+              <li data-p="A" tabindex="0"><b>[A]</b>
+                <div><strong>Entablamento</strong><span>Observabilidade: enxergar o que a estrutura sustenta.</span>
+                </div>
+              </li>
+              <li data-p="B" tabindex="0"><b>[B]</b>
+                <div><strong>Capitel</strong><span>CI/CD e automação: a transição entre código e runtime.</span></div>
+              </li>
+              <li data-p="C" tabindex="0"><b>[C]</b>
+                <div><strong>Fuste</strong><span>Containers e serviços: o corpo que carrega a carga.</span></div>
+              </li>
+              <li data-p="D" tabindex="0"><b>[D]</b>
+                <div><strong>Estilóbata</strong><span>Infraestrutura como código: a base reproduzível.</span></div>
+              </li>
+            </ol>
+            <figcaption class="cap mono"><span>Fig. 02 — Plataforma como estrutura</span><span>Rev. A</span>
+            </figcaption>
+          </figure>
+          <div>
+            <div class="big" style="margin-bottom:1.4rem">Construo para<br>operar, não só<br>para entregar.</div>
+            <p><b>Sou analista de software na Alghorit</b>, uma startup de automação industrial, e estou direcionando
+              minha carreira para DevOps, SRE e Platform Engineering.</p>
+            <p>Comecei em 2023 como estagiário de qualidade e passei para o desenvolvimento em 2024. No caminho, o que
+              mais me atraiu foi manter sistemas funcionando: pipelines de CI/CD, deploy automático, monitoramento e
+              automação de rotinas.</p>
+            <p>Fora do trabalho, uso projetos de estudo para praticar as ferramentas que o mercado usa. Busco sistemas
+              observáveis, automação reproduzível e documentação que outra pessoa consiga seguir sem precisar me
+              perguntar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <div class="wrap">
+        <div class="sh rv">
+          <h2>Projetos</h2>
+          <p>Cada sistema é uma zona. Cada zona, um contrato de confiabilidade.</p>
+        </div>
+        <p class="mono rv" style="margin:-1rem 0 1.6rem">Projetos de estudo, criados para praticar ferramentas usadas no
+          mercado.</p>
+        <div class="mono sysline rv"><span><i class="rec"></i>// Sistema de monitoramento v1.0</span><span>Gravação
+            ativa</span><span>4/4 projetos catalogados</span></div>
+        <div class="dg">
+          <article class="dos tex rv"><span class="num" aria-hidden="true">01</span>
+            <div class="feed"><span class="mono"><i class="rec"></i>REC · CAM-01</span><span class="wv"></span><span
+                class="mono clk">--:--:--</span></div>
+            <div class="bd"><span class="br">PRJ-01</span>
+              <h3>sports-telemetry-platform</h3>
+              <p>Pipeline de telemetria em Go, com PostgreSQL, Redis, Docker e dashboards no Grafana.</p>
+              <div class="chips"><span class="chip">Go</span><span class="chip">PostgreSQL</span><span
+                  class="chip">Redis</span><span class="chip">Docker</span><span class="chip">Grafana</span></div>
+              <a class="lk" href="https://github.com/zneszz/telemetry-platform" rel="noopener">Repositório ↗</a>
+            </div>
+            <div class="cr">
+              <div><span>Categoria</span>Telemetria</div>
+              <div><span>Foco</span>Ingestão e visualização</div>
+              <div><span>Status</span>Projeto de estudo</div>
+            </div>
+          </article>
+          <article class="dos tex rv"><span class="num" aria-hidden="true">02</span>
+            <div class="feed"><span class="mono"><i class="rec"></i>REC · CAM-02</span><span class="wv"></span><span
+                class="mono clk">--:--:--</span></div>
+            <div class="bd"><span class="br">PRJ-02</span>
+              <h3>server-stats</h3>
+              <p>Coleta de métricas de servidores Linux em Bash, a partir do desafio do roadmap.sh, com foco nos
+                fundamentos de operação.</p>
+              <div class="chips"><span class="chip">Bash</span><span class="chip">Linux</span></div>
+              <a class="lk" href="https://github.com/zneszz/server-perf-stats" rel="noopener">Repositório ↗</a>
+            </div>
+            <div class="cr">
+              <div><span>Categoria</span>Observabilidade</div>
+              <div><span>Foco</span>Fundamentos de operação</div>
+              <div><span>Status</span>Projeto de estudo</div>
+            </div>
+          </article>
+          <article class="dos tex rv"><span class="num" aria-hidden="true">03</span>
+            <div class="feed"><span class="mono"><i class="rec"></i>REC · CAM-03</span><span class="wv"></span><span
+                class="mono clk">--:--:--</span></div>
+            <div class="bd"><span class="br">PRJ-03</span>
+              <h3>Pitwall</h3>
+              <p>TUI de Fórmula 1 em Go, consumindo a API OpenF1, com Bubble Tea, Lip Gloss e Cobra.</p>
+              <div class="chips"><span class="chip">Go</span><span class="chip">Bubble Tea</span><span
+                  class="chip">Cobra</span><span class="chip">OpenF1</span></div>
+              <a class="lk" href="https://github.com/zneszz/pitwall" rel="noopener">Repositório ↗</a>
+            </div>
+            <div class="cr">
+              <div><span>Categoria</span>CLI / TUI</div>
+              <div><span>Foco</span>Dados em tempo real</div>
+              <div><span>Status</span>Projeto de estudo</div>
+            </div>
+          </article>
+          <article class="dos tex rv"><span class="num" aria-hidden="true">04</span>
+            <div class="feed"><span class="mono"><i class="rec"></i>REC · CAM-04</span><span class="wv"></span><span
+                class="mono clk">--:--:--</span></div>
+            <div class="bd"><span class="br">PRJ-04</span>
+              <h3>gas-injection-system</h3>
+              <p>Recriação pessoal, para estudo, de um sistema de controle de injeção de gás, em React e Next.js.</p>
+              <div class="chips"><span class="chip">React</span><span class="chip">Next.js</span></div>
+              <a class="lk" href="https://github.com/zneszz/gasly" rel="noopener">Repositório ↗</a>
+            </div>
+            <div class="cr">
+              <div><span>Categoria</span>Interface de controle</div>
+              <div><span>Foco</span>Domínio industrial</div>
+              <div><span>Status</span>Projeto de estudo</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="wrap">
+        <div class="sh rv">
+          <h2>Stack</h2>
+          <p>Camadas do sistema, da automação à observabilidade.</p>
+        </div>
+        <div class="lg mono rv"><span>Em uso (trabalho ou projetos)</span><span>Em estudo</span></div>
+        <div class="lay rv">
+          <div class="lr">
+            <div>
+              <h3>Linguagens e automação</h3>
+            </div>
+            <div class="chips"><span class="chip">TypeScript</span><span class="chip">Python</span><span
+                class="chip">Bash</span><span class="chip">Go</span><span class="chip">Angular</span><span
+                class="chip">React / Next.js</span></div>
+          </div>
+          <div class="lr">
+            <div>
+              <h3>Sistemas e containers</h3>
+            </div>
+            <div class="chips"><span class="chip">Linux</span><span class="chip">Windows</span><span
+                class="chip">Docker</span><span class="chip n">Kubernetes</span><span class="chip n">Helm</span></div>
+          </div>
+          <div class="lr">
+            <div>
+              <h3>Observabilidade</h3>
+            </div>
+            <div class="chips"><span class="chip">Zabbix</span><span class="chip">Grafana</span><span
+                class="chip n">Prometheus</span><span class="chip n">SLI / SLO</span><span
+                class="chip n">Alertmanager</span></div>
+          </div>
+          <div class="lr">
+            <div>
+              <h3>Dados</h3>
+            </div>
+            <div class="chips"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span
+                class="chip">MongoDB</span><span class="chip">Redis</span></div>
+          </div>
+          <div class="lr">
+            <div>
+              <h3>CI/CD e IaC</h3>
+            </div>
+            <div class="chips"><span class="chip">Git</span><span class="chip">GitLab CI/CD</span><span
+                class="chip n">GitHub Actions</span><span class="chip n">Terraform</span><span
+                class="chip n">Ansible</span></div>
+          </div>
+          <div class="lr">
+            <div>
+              <h3>Cloud e redes</h3>
+            </div>
+            <div class="chips"><span class="chip n">AWS (teórico)</span><span class="chip">Redes</span></div>
+          </div>
+          <div class="lr">
+            <div>
+              <h3>Qualidade e incidentes</h3>
+            </div>
+            <div class="chips"><span class="chip">Testes de API (Postman)</span><span class="chip">Análise de
+                logs</span><span class="chip">Análise de incidentes</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trajetoria">
+      <div class="wrap">
+        <div class="sh rv">
+          <h2>Trajetória</h2>
+          <p>Do software à plataforma.</p>
+        </div>
+        <div class="tl rv">
+          <article><span class="mono">Jul/2024 — atual</span>
+            <div>
+              <h3>Analista de Software — Alghorit</h3>
+              <p>Startup de automação industrial. Software de controle com TypeScript e Angular, PostgreSQL, Docker e
+                servidores Linux; pipelines GitLab CI/CD, monitoramento com Zabbix e Grafana e rotinas de operação de
+                TI. Destaques: otimização do processo de CI, deploy automático e automação de mensagens em ferramentas
+                de comunicação como Discord e Slack.</p>
+            </div>
+          </article>
+          <article><span class="mono">Out/2023 — jun/2024</span>
+            <div>
+              <h3>Estagiário de Qualidade de Software — Alghorit</h3>
+              <p>Testes funcionais, de regressão e de API (Postman, scripts em Python), registro e acompanhamento de
+                bugs, e monitoramento com Zabbix e Grafana.</p>
+            </div>
+          </article>
+          <article><span class="mono">2022 — 2025</span>
+            <div>
+              <h3>Ciência da Computação — Centro Universitário UNA</h3>
+              <p>Graduação concluída.</p>
+            </div>
+          </article>
+          <article><span class="mono">Complementar</span>
+            <div>
+              <h3>AWS Academy Cloud Foundations</h3>
+              <p>Certificado do curso, com foco teórico em fundamentos de cloud.</p>
+            </div>
+          </article>
+          <article><span class="mono">Em andamento</span>
+            <div>
+              <h3>Laboratório de estudos DevOps</h3>
+              <p>Plano estruturado de infraestrutura e DevOps, junto com inglês, documentado em projetos práticos.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="wrap">
+        <div class="ct tex rv"><span class="num" aria-hidden="true">SRE</span>
+          <span class="br">Contato</span>
+          <h2 style="margin-top:.8rem">Vamos falar de confiabilidade.</h2>
+          <ul class="cl">
+            <li><a href="mailto:arthur.dinizs@proton.me"><span>E-mail</span><span>arthur.dinizs@proton.me</span></a>
+            </li>
+            <li><a href="https://github.com/zneszz" rel="noopener"><span>GitHub</span><span>github.com/zneszz</span></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/arthur-diniz-souza-silva/"
+                rel="noopener"><span>LinkedIn</span><span>linkedin.com/in/arthur-diniz-souza-silva</span></a></li>
+          </ul>
+          <p style="margin-top:1.5rem;position:relative;display:flex;gap:1rem;align-items:center;flex-wrap:wrap"><button
+              class="btn p" type="button" data-cv>Baixar currículo (PDF) ↓</button><span class="mono">Abre a impressão:
+              escolha “Salvar como PDF”.</span></p>
+        </div>
+        <div class="credits">
+          <div>Portfólio / Arthur Diniz</div>
+          <div>Local / Sete Lagoas · MG</div>
+          <div>© 2026</div>
+        </div>
+      </div>
+    </section>
+    <div class="wm" aria-hidden="true"><span>Arthur</span><i>✦</i><span>Diniz</span></div>
+
+    <section class="cv" id="cv" aria-label="Currículo (versão para impressão)">
+      <div class="cv-h">
+        <h1>Arthur Diniz Souza Silva</h1>
+        <div class="cv-r">Analista de Software | DevOps · Observabilidade (Observability) · SRE</div>
+        <div class="cv-c"><span>Sete Lagoas,
+            MG</span><span>arthur.dinizs@proton.me</span><span>github.com/zneszz</span><span>linkedin.com/in/arthur-diniz-souza-silva</span>
+        </div>
+      </div>
+      <h2>Resumo</h2>
+      <p>Analista de software com cerca de três anos de experiência em uma startup de automação industrial, em transição
+        para DevOps, SRE e Platform Engineering. Atuação com integração e entrega contínuas (CI/CD), deploy automático,
+        monitoramento (monitoring) com Zabbix e Grafana, Docker, servidores Linux, troubleshooting e análise de
+        incidentes.</p>
+      <h2>Experiência</h2>
+      <div class="cv-i">
+        <header><span>Analista de Software — Alghorit (startup de automação industrial)</span><time>07/2024 –
+            Atual</time></header>
+        <ul>
+          <li>Otimização do processo de integração contínua (CI) e do deploy automático (CD) com GitLab CI/CD.</li>
+          <li>Automação de mensagens em ferramentas de comunicação, como Discord e Slack.</li>
+          <li>Desenvolvimento de software de controle com TypeScript, Angular, PostgreSQL e Docker.</li>
+          <li>Operação de servidores Linux e monitoramento (monitoring) com Zabbix e Grafana.</li>
+        </ul>
+      </div>
+      <div class="cv-i">
+        <header><span>Estagiário de Qualidade de Software — Alghorit</span><time>10/2023 – 06/2024</time></header>
+        <ul>
+          <li>Testes funcionais, de regressão e de API (Postman e scripts em Python).</li>
+          <li>Registro, documentação e acompanhamento de bugs.</li>
+          <li>Monitoramento (monitoring) com Zabbix e Grafana.</li>
+        </ul>
+      </div>
+      <h2>Projetos de estudo</h2>
+      <div class="cv-i">
+        <ul>
+          <li><b>sports-telemetry-platform</b> — pipeline de telemetria em Go com PostgreSQL, Redis, Docker e dashboards
+            Grafana (github.com/zneszz/telemetry-platform).</li>
+          <li><b>server-perf-stats</b> — coleta de métricas de servidores Linux em Bash, a partir do desafio do
+            roadmap.sh (github.com/zneszz/server-perf-stats).</li>
+          <li><b>Pitwall</b> — TUI de Fórmula 1 em Go (Bubble Tea, Cobra) com a API OpenF1 (github.com/zneszz/pitwall).
+          </li>
+          <li><b>gas-injection-system</b> — recriação pessoal, para estudo, de um sistema de controle em React e Next.js
+            (github.com/zneszz/gasly).</li>
+        </ul>
+      </div>
+      <h2>Competências</h2>
+      <div class="cv-i">
+        <ul>
+          <li><b>Linguagens:</b> TypeScript, Python, Bash, Go · Angular, React / Next.js</li>
+          <li><b>Controle de versão:</b> Git, GitLab, GitHub</li>
+          <li><b>Sistemas e containers:</b> Linux, Windows, Docker</li>
+          <li><b>Observabilidade (observability) e monitoramento:</b> Zabbix, Grafana</li>
+          <li><b>Dados:</b> PostgreSQL, MySQL, MongoDB, Redis</li>
+          <li><b>CI/CD (integração e entrega contínuas):</b> GitLab CI/CD</li>
+          <li><b>Cloud e redes:</b> AWS (fundamentos, teórico), redes</li>
+          <li><b>Qualidade e incidentes:</b> testes de API (Postman), análise de logs, análise de incidentes (incident
+            analysis), troubleshooting</li>
+          <li><b>Em estudo:</b> Kubernetes, infraestrutura como código (IaC) com Terraform e Ansible, Prometheus, SLI /
+            SLO</li>
+        </ul>
+      </div>
+      <h2>Formação</h2>
+      <div class="cv-i">
+        <ul>
+          <li>Ciência da Computação — Centro Universitário UNA, 2022–2025</li>
+          <li>AWS Academy Cloud Foundations — certificado do curso</li>
+        </ul>
+      </div>
+      <h2>Idiomas</h2>
+      <p>Português (nativo) · Inglês (em desenvolvimento)</p>
+    </section>
+  </main>
+  <div class="hint mono" aria-hidden="true">Pressione <kbd>?</kbd> para atalhos</div>
+  <dialog id="cmd" aria-label="Atalhos e navegação">
+    <div class="cmd-h"><span class="br">Atalhos</span><kbd>Esc</kbd></div>
+    <input id="q" type="text" placeholder="Ir para…" aria-label="Buscar comando" autocomplete="off">
+    <ul id="cmdlist"></ul>
+    <div class="cmd-f mono">↑ ↓ navegar · ↵ executar · ? ou ⌘/Ctrl K abrir</div>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
